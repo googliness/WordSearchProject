@@ -17,9 +17,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '^)6sx8yw&2n6agc64i3sij3oc4+9eh3r%e5%@l3$*xvw+!152('
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['wordsearchapp.herokuapp.com']
 
 
 INSTALLED_APPS = [
