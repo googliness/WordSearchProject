@@ -5,7 +5,7 @@ w1 = 0.2
 # rank weight for word length
 w2 = 0.1
 # rank weight for words with higher frequency
-w3 = -0.25
+w3 = -0.15
 # upper bound on the maximum number of word suggestions to be sent as response
 limit = 25
 # index of word to be used as key during sorting of tuples
