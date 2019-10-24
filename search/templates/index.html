@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word Search</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+    $( "#tags" ).autocomplete({
+      source: function(request, response) {
+            $.ajax({
+                url: "/search?word="+$("#tags").val(),
+                dataType: "json",
+                success: function(data) {
+                    response(data);
+                }
+            });
+      },
+      minLength: 1,
+    });
+    });
+    </script>
+    <style>
+        input[type=text], select {
+          margin: auto;
+          width: 40%;
+          padding: 12px 20px;
+          display: block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align:center;">Autocomplete Word</h1>
+<div class="ui-widget">
+  <input id="tags" type="text" placeholder="Enter Word..">
+</div>
+</body>
+</html>
